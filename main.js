@@ -49,7 +49,7 @@ function iniciar() {
         iniciar()}
 
 //esta funcion representa el bloque de codigo del formulario
-function formulario(){
+function formulario(responsable, objetivo, Sitio, tiempo){
     
 
     responsable = prompt('Escribe el nombre de la Empresa o Responsable.');
@@ -99,7 +99,7 @@ function formulario(){
 
 
                     //si necesita un dominio
-                     function condominio(){
+                     function condominio(dominio, ){
                         let preguntaDominio = prompt('¿Necesitas un Dominio?')
                   
                         if (preguntaDominio == "si" || preguntaDominio == "Si" || preguntaDominio == "SI" ){
@@ -111,8 +111,7 @@ function formulario(){
                                 precioDominio = 10
                             //escribimos rersultados
                             
-                             document.write(' Ademas, a se le sumará un dominio de' + precioDominio + 'u$s. Con el nombre de ' + dominio + '.')
-                             document.write('<br>')
+                              return document.write(' Ademas, a se le sumará un dominio de' + precioDominio + 'u$s. Con el nombre de ' + dominio + '.' + '<br>')
                             }
                         else{
                             precioDominio = 0
@@ -127,9 +126,7 @@ function formulario(){
                         //le otrogamos el valor al dominio
                             precioHosting = 40
                         //mostramos el precio
-                        document.write(' Ademas a este se le sumará un Hosting de ' + precioHosting + 'u$s' + '.');
-                        document.write('<br>')
-                       
+                         return document.write(' Ademas a este se le sumará un Hosting de ' + precioHosting + 'u$s' + '.' +'<br>');   
                         }
                         else{
                             precioHosting = 0
@@ -141,7 +138,7 @@ function formulario(){
     function total(){
         let total = Number(precio) + Number(precioDominio) + Number(precioHosting);
 
-        document.write( 'En total son ' + total + 'u$s ')
+        return document.write( 'En total son ' + total + 'u$s ')
     }
 
   
